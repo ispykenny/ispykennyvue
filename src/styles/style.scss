@@ -1,3 +1,10 @@
 @import './vars';
+@import './lib/mixins';
 @import './settings';
 @import './fonts';
+@import './grid';
+
+body {
+  transition: $themeTransition;
+  background-color: #F8F6FE;
+}
