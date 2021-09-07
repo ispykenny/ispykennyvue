@@ -7,7 +7,6 @@
           <div>
             <div>
               <h1>{{title}}</h1>
-              <h2> {{ $store.state.counter }} </h2>
               <p>
                 {{copy}}
               </p>

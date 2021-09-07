@@ -23,7 +23,7 @@
 
 <script>
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
-
+import { mapGetters } from 'vuex';
 export default {
   name: "Products",
   methods: {
@@ -32,9 +32,9 @@ export default {
     }
   },
   computed: {
-    myProducts() {
-      return this.$store.getters.getProducts
-    }
+    ...mapGetters({
+      myProducts: "getProducts"
+    })
   }
 }
 </script>

@@ -17,7 +17,7 @@ import TopNav from '@/components/Nav/TopNav.vue'
 import Hero from '@/components/Hero.vue'
 import image from '@/assets/me.jpg'
 import Products from './components/Products.vue'
-
+import { mapActions } from 'vuex'
 export default {
   name: 'App',
   components: {
@@ -30,9 +30,12 @@ export default {
       image: image
     }
   },
-  mounted() {
-    this.$store.dispatch('setProducts')
-  }
+  methods: {
+    ...mapActions(['setProducts'])
+  },
+  mounted()  {
+    this.setProducts();
+  },
 }
 </script>
 
